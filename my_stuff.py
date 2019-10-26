@@ -20,23 +20,29 @@ import random
 from sklearn.metrics import confusion_matrix
 #from sklearn_crfsuite import metrics
 
-#{0:'I', 1:'B', 2:'O', 3:'<PAD>'}
+from RULE import RULEs
+from POSMap import POSMAP
+
+#new
 class MyDataloader(Dataset):
     def __init__(self, TextDir: '.txt extension of samples', LabelDir: '.txt extension of labels',rules:\
                  'the rules to be replaced => see in RULE.py', Len_word_vec: 'size of word vector', \
                 delimiter: '(str) delimiter used to separate data', dir_char_dictionary: \
                 '(str) see in CharEmbedding', max_len_char: '(int) see in CharEmbedding', \
                 fasttext_dictionary_dir: '(str) see in WordEmbedding',\
-                Len_embedded_vector: '(int) see in WordEmbedding', device) -> None:
+                Len_embedded_vector: '(int) see in WordEmbedding', device, POSDir: '(str) .txt extension of POS',\
+                POSMapping: 'see in POSMap.py') -> None:
         super().__init__()
         self.DF = pd.read_csv(TextDir, names=['text'])
         self.Label_DF = pd.read_csv(LabelDir, names=['text'])
+        self.pos_DF = pd.read_csv(POSDir, names=['text'])
         self.rules = rules
         self.Len_word_vec = Len_word_vec
         self.delimiter = delimiter
         self.char_embedder = CharEmbedding(dir_char_dictionary, max_len_char)
         self.word_embedder = WordEmbedding(fasttext_dictionary_dir, Len_embedded_vector)
         self.device = device
+        self.pos_embedder = POSEmbedding(POSMapping)
     def __len__(self):
         return len(self.DF)
     def __getitem__(self, Index) -> '(sample: (torch.tensor), label: (torch.tensor))':
@@ -46,18 +52,22 @@ class MyDataloader(Dataset):
                 all_words[i] = re.sub(*rule, all_words[i])
         Label = [float(word.strip()) for word in self.Label_DF['text'][Index].strip().split(self.delimiter)]
         mask = [1.0]*len(all_words)
+        POS = [pos.strip() for pos in self.pos_DF['text'][Index].strip().split(self.delimiter)]
         if len(all_words) < self.Len_word_vec:
             Label = Label + [3.0]*(self.Len_word_vec - len(all_words))
             mask = mask + [0.0]*(self.Len_word_vec - len(all_words))
+            POS = POS + ['<pad>']*(self.Len_word_vec - len(all_words))
             all_words = all_words + ['<pad>']*(self.Len_word_vec - len(all_words))
         char_embed = self.char_embedder.embed(all_words)
         word_embed = self.word_embedder.embed(all_words)
-        
+        pos_embed = self.pos_embedder.embed(POS)
         # print(len(all_words))
         # print(len(Label))
         # print(len(mask))
         # print('----------')
-        return (char_embed.to(self.device), word_embed.to(self.device), torch.tensor(Label).to(self.device), torch.tensor(mask).to(self.device), len(all_words))
+        return (char_embed.to(self.device), word_embed.to(self.device), \
+                torch.tensor(Label).to(self.device), torch.tensor(mask).to(self.device), \
+                len(all_words), pos_embed.float().to(device))
     
 
 class CharEmbedding():
@@ -121,6 +131,25 @@ class WordEmbedding():
                 tmp_list.append(np.zeros(self.Len_embedded_vector))
         return torch.tensor(tmp_list)
 
+class POSEmbedding():
+    def __init__(self, POSMapping: 'see in POSMap.py'):
+        self.dictionary = POSMapping
+        self.size = len(self.dictionary)
+    def embed(self, list_of_POSs:'(list[str]) example: ["NOUN","VERB","NOUN"]'):
+        tmp_list = []
+        for POS in list_of_POSs:
+            POS = POS.strip()
+            if POS == '<pad>':
+                tmp_list.append(np.zeros(self.size))
+            else:
+                tmp_data = np.zeros(self.size)
+                tmp_data[self.dictionary[POS]] = 1
+                tmp_list.append(tmp_data)
+        return torch.tensor(tmp_list)
+
+#############################
+
+#new
 ############### RNN encoding ######################
 class RNN_char(nn.Module):
     def __init__(self, num_char_vec_features, hidden_size, num_layers, dropout_gru, bidirectional, \
@@ -159,52 +188,30 @@ class over_all_NER2(nn.Module):
                  gru_hidden_size: '(int) see in gru_crf', \
                  dropout_gru: '(double) see in gru_crf', \
                  bidirectional: '(bool)', \
-                 tags: '(dict[int: str]) see in gru_crf', DO_FCN_GRUCRF: '(double)', DOchar_FCN: '(double)'):
+                 tags: '(dict[int: str]) see in gru_crf', DO_FCN_GRUCRF: '(double)', DOchar_FCN: '(double)',\
+                 pos_size: '(int) size of pos embedding'):
         super().__init__()
         self.gru_char = RNN_char(num_char_vec_features, hidden_size, max_num_char, dropout_gru_char, \
                                  bidirectional_char, output_char_embed_size, DOchar_FCN, num_words)
-        self.gru_crf_layer = gru_crf(size_of_embedding + output_char_embed_size, \
+        self.gru_crf_layer = gru_crf(size_of_embedding + output_char_embed_size + pos_size, \
                                      gru_hidden_size, num_words, dropout_gru, bidirectional, tags, DO_FCN_GRUCRF)
     def forward(self, x):
         tmp_compute = self.gru_char(x[0])
         #print(tmp_compute.size())
         #print(x[1].size())
-        tmp_compute = torch.cat([tmp_compute, x[1].float()], 2)
+        tmp_compute = torch.cat([tmp_compute, x[1].float(), x[5]], 2)
         #print(tmp_compute.size())
         tmp_gru_crf = self.gru_crf_layer((tmp_compute, x[4]), x[2], x[3].long())
         return tmp_gru_crf
     def predict(self, x):
         tmp_compute = self.gru_char(x[0])
-        tmp_compute = torch.cat([tmp_compute, x[1].float()], 2)
+        tmp_compute = torch.cat([tmp_compute, x[1].float(), x[5]], 2)
         tmp_gru_crf = self.gru_crf_layer.predict((tmp_compute, x[4]), x[3].long())
         return tmp_gru_crf
 
+##############################
 
-# class TimeDistributed(nn.Module):
-#     def __init__(self, layer: '(nn.Module) layer to be processed', time_steps: '(int)'):
-#         super().__init__()
-#         self.layers = nn.ModuleList([layer for i in range(time_steps)])
-
-#     def forward(self, x) -> '(torch.tensor) shape=(1, embedding_size)':
-#         batch_size, time_steps, C, H, W = x.size()
-#         output = torch.tensor([])
-#         for i in range(time_steps):
-#           output_t = self.layers[i](x[:, i, :, :, :])
-#           output_t  = torch.flatten(output_t)
-#           output = torch.cat((output, output_t ), 1)
-#         return output
-
-# class Convs(nn.Module):
-#     def __init__(self, List_of_kernel_sizes: 'example: [(3,100),(5,100),(7,100)]', List_num_filter: 'example: \
-#     [64,64,128] ***len(List_num_filter) must equal to len(List_of_kernel_sizes)***',\
-#     use_BN: 'see My2DConv', activation_func: 'see My2DConv', input_channel: 'see My2DConv', \
-#     same_padding: 'see My2DConv', time_steps: 'see TimeDistributed'):
-#         tmp_List_layers = []
-#         for ind, kernel_size in enumerate(List_of_kernel_sizes):
-#             tmp_List_layers.append(TimeDistributed(My2DConv(List_num_filter[ind], use_BN, \
-#             activation_func, input_channel, kernel_size, same_padding), time_steps))
-#         self.Layer_list = nn.ModuleList(tmp_List_layers)
-
+#new
 def get_index(len_row, len_col)->'(iterator of all ((int)row, (int)col))':
     for i in range(len_row):
         for j in range(len_col):
