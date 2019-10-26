@@ -23,7 +23,7 @@ from sklearn.metrics import confusion_matrix
 from RULE import RULEs
 from my_stuff import *
 
-BS = 512
+BS = 256
 tags = {0:'I', 1:'B', 2:'O', 3:'<pad>'}
 scheduler_n = 15
 word_length = 85
@@ -64,13 +64,14 @@ test_loader = DataLoader(data, batch_size=BS, sampler=te)
 
 with open('my_logs.txt', 'w', encoding ='utf8') as f:
     for cur_ind in range(num_search):
+        torch.cuda.empty_cache()
         grucrf_dropout = random.uniform(0.1,0.6)#0.5
         gruchar_dropout = random.uniform(0.1,0.6)#0.5
         DO_FCN_GRUCRF = random.uniform(0.1,0.6)#0.5
         DO_FCN_CHAR = random.uniform(0.1,0.6)#0.5
         grucrf_hidden_size = random.choice([8,16,32,64,128])#5
         hidden_size_char_gru = random.choice([8,16,32,64,128])#20
-        LR = 10**random.uniform(-3,-5)#0.001
+        LR = 5*10**random.uniform(-3,-5)#0.001
         f.write(f'cur_ind: {cur_ind}\n')
         f.write(f'grucrf_dropout: {grucrf_dropout}, gruchar_dropout: {gruchar_dropout}\n')
         f.write(f'DO_FCN_GRUCRF: {DO_FCN_GRUCRF}, DO_FCN_CHAR: {DO_FCN_CHAR}\n')
@@ -90,7 +91,7 @@ with open('my_logs.txt', 'w', encoding ='utf8') as f:
         best_score = 0
         best_mat = np.zeros((len(tags)-1,3))
         cnt_idle = 0
-        for epoch in range(20):
+        for epoch in range(6):
             print(f'epoch {epoch}')
             all_loss = []
             for ind, batch_x in enumerate(train_loader):
@@ -139,4 +140,3 @@ with open('my_logs.txt', 'w', encoding ='utf8') as f:
         f.write(f'O => recall: {best_mat[2,0]}, precision: {best_mat[2,1]}, , f1: {best_mat[2,2]}\n')
         f.write(f'best_mat\n')
         f.write(f'----------------------------------\n')
-
