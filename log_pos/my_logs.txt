@@ -1,0 +1,250 @@
+cur_ind: 0
+grucrf_dropout: 0.4206430099967071, gruchar_dropout: 0.6646046671620174
+DO_FCN_GRUCRF: 0.5709152091409851, DO_FCN_CHAR: 0.5578045068639033
+grucrf_hidden_size: 4, hidden_size_char_gru: 8
+LR: 0.00303636778010717
+cur_ind: 0
+grucrf_dropout: 0.5137133494608648, gruchar_dropout: 0.515751154080215
+DO_FCN_GRUCRF: 0.5922828784428897, DO_FCN_CHAR: 0.6115762257035793
+grucrf_hidden_size: 4, hidden_size_char_gru: 8
+LR: 0.0031551518764418207
+best_score: 0.3201372162127448
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9238466366969095, , f1: 0.9604116486382345
+best_mat
+----------------------------------
+cur_ind: 1
+grucrf_dropout: 0.5001212006393128, gruchar_dropout: 0.5107262810757863
+DO_FCN_GRUCRF: 0.41465863980799766, DO_FCN_CHAR: 0.5183701497322141
+grucrf_hidden_size: 16, hidden_size_char_gru: 4
+LR: 0.0006135577533661016
+best_score: 0.3201421286203619
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9238731047941091, , f1: 0.9604263858610858
+best_mat
+----------------------------------
+cur_ind: 2
+grucrf_dropout: 0.593059831032996, gruchar_dropout: 0.5326593121559384
+DO_FCN_GRUCRF: 0.6711250053896781, DO_FCN_CHAR: 0.5700900162927329
+grucrf_hidden_size: 8, hidden_size_char_gru: 4
+LR: 0.0003059643807600401
+best_score: 0.2455365808626158
+best_mat
+I => recall: 0.46440833265960607, precision: 0.0003512093165844593, , f1: 0.0007014963410996313
+B => recall: 0.14716654001240648, precision: 0.16438981081434925, , f1: 0.1551225520754603
+O => recall: 0.42197418068193804, precision: 0.9313162535367409, , f1: 0.5807856941712874
+best_mat
+----------------------------------
+cur_ind: 3
+grucrf_dropout: 0.40139265518489187, gruchar_dropout: 0.479416835314851
+DO_FCN_GRUCRF: 0.5511768887777918, DO_FCN_CHAR: 0.4029579089471961
+grucrf_hidden_size: 16, hidden_size_char_gru: 4
+LR: 0.0004047499836752792
+best_score: 0.22628161485603118
+best_mat
+I => recall: 0.5043802688539532, precision: 0.0004593641096028981, , f1: 0.0009176822217785587
+B => recall: 0.028608973039044545, precision: 0.07718321325684908, , f1: 0.04169084285216827
+O => recall: 0.4866645890371764, precision: 0.9185582797991728, , f1: 0.6362363194941467
+best_mat
+----------------------------------
+cur_ind: 4
+grucrf_dropout: 0.4505674927133261, gruchar_dropout: 0.6624523181377884
+DO_FCN_GRUCRF: 0.6551966629478205, DO_FCN_CHAR: 0.6796451501969593
+grucrf_hidden_size: 16, hidden_size_char_gru: 4
+LR: 0.0008190215160469957
+best_score: 0.32014410508251867
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9238870608498447, , f1: 0.960432315247556
+best_mat
+----------------------------------
+cur_ind: 5
+grucrf_dropout: 0.4224976078747642, gruchar_dropout: 0.42795881163538324
+DO_FCN_GRUCRF: 0.5930342950460551, DO_FCN_CHAR: 0.4097747085091866
+grucrf_hidden_size: 16, hidden_size_char_gru: 4
+LR: 6.828761670701849e-05
+best_score: 0.07397697315931741
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 0.1271616065338386, precision: 0.8719270169542283, , f1: 0.22193091947795224
+best_mat
+----------------------------------
+cur_ind: 6
+grucrf_dropout: 0.42512768640916854, gruchar_dropout: 0.6130184151726716
+DO_FCN_GRUCRF: 0.46314954679716547, DO_FCN_CHAR: 0.528618397638404
+grucrf_hidden_size: 8, hidden_size_char_gru: 8
+LR: 0.0007943037725760076
+best_score: 0.32012640608021564
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9237887926222386, , f1: 0.9603792182406469
+best_mat
+----------------------------------
+cur_ind: 7
+grucrf_dropout: 0.6767804178342853, gruchar_dropout: 0.5077770835156902
+DO_FCN_GRUCRF: 0.47546230533723327, DO_FCN_CHAR: 0.6401632333691525
+grucrf_hidden_size: 16, hidden_size_char_gru: 16
+LR: 0.0004164029676349043
+best_score: 0.32013902289315266
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9238570411608643, , f1: 0.960417068679458
+best_mat
+----------------------------------
+cur_ind: 8
+grucrf_dropout: 0.6206035250951426, gruchar_dropout: 0.4488986205011584
+DO_FCN_GRUCRF: 0.6967182666888714, DO_FCN_CHAR: 0.43747903096372054
+grucrf_hidden_size: 16, hidden_size_char_gru: 16
+LR: 0.0006230372181937055
+best_score: 0.32744386767928735
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.014649552009875371, precision: 0.11704679247929599, , f1: 0.025986507008667954
+O => recall: 0.9908094341195949, precision: 0.9242048658128825, , f1: 0.956345096029194
+best_mat
+----------------------------------
+cur_ind: 9
+grucrf_dropout: 0.4459424251284044, gruchar_dropout: 0.423099072809979
+DO_FCN_GRUCRF: 0.47225721766848594, DO_FCN_CHAR: 0.4119644647720125
+grucrf_hidden_size: 4, hidden_size_char_gru: 16
+LR: 0.002069996668753573
+best_score: 0.32013787006895966
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9238527638659599, , f1: 0.960413610206879
+best_mat
+----------------------------------
+cur_ind: 10
+grucrf_dropout: 0.5060322560552302, gruchar_dropout: 0.618259876897268
+DO_FCN_GRUCRF: 0.6558612879940051, DO_FCN_CHAR: 0.6563397946934386
+grucrf_hidden_size: 8, hidden_size_char_gru: 4
+LR: 0.002001862276471774
+best_score: 0.3312554175721486
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.026259253801185583, precision: 0.10383543303837814, , f1: 0.04180464639622573
+O => recall: 0.9815267709223918, precision: 0.9241363494049688, , f1: 0.9519616063202201
+best_mat
+----------------------------------
+cur_ind: 11
+grucrf_dropout: 0.6537372274520215, gruchar_dropout: 0.43598848781082294
+DO_FCN_GRUCRF: 0.4778309256442042, DO_FCN_CHAR: 0.48908858894336393
+grucrf_hidden_size: 16, hidden_size_char_gru: 8
+LR: 0.0007036793555340187
+best_score: 0.3629942930088054
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.14622825494857458, precision: 0.16430123232521604, , f1: 0.15462049506424771
+O => recall: 0.9387810765595364, precision: 0.9299945328605767, , f1: 0.9343623839621684
+best_mat
+----------------------------------
+cur_ind: 12
+grucrf_dropout: 0.6917840630254941, gruchar_dropout: 0.6367741904577908
+DO_FCN_GRUCRF: 0.6186405155224242, DO_FCN_CHAR: 0.41527673523810543
+grucrf_hidden_size: 8, hidden_size_char_gru: 8
+LR: 0.00011694762208641839
+best_score: 0.30188005956766695
+best_mat
+I => recall: 0.1857313239238447, precision: 0.0005222175104501964, , f1: 0.0010405773917607712
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 0.8790424700696633, precision: 0.9317096459084597, , f1: 0.9045996013112401
+best_mat
+----------------------------------
+cur_ind: 13
+grucrf_dropout: 0.43647523602196675, gruchar_dropout: 0.5944093481460037
+DO_FCN_GRUCRF: 0.43435598331663283, DO_FCN_CHAR: 0.4280883894492057
+grucrf_hidden_size: 4, hidden_size_char_gru: 4
+LR: 0.001077445250519686
+best_score: 0.3201270051193074
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.923790374917492, , f1: 0.9603810153579222
+best_mat
+----------------------------------
+cur_ind: 14
+grucrf_dropout: 0.5058006721769958, gruchar_dropout: 0.6699531717510661
+DO_FCN_GRUCRF: 0.5474477017612147, DO_FCN_CHAR: 0.6434487593566744
+grucrf_hidden_size: 8, hidden_size_char_gru: 8
+LR: 0.0001765616224359034
+best_score: 0.2323949097250698
+best_mat
+I => recall: 0.3347658920027341, precision: 0.0002702219181307742, , f1: 0.0005398758407139714
+B => recall: 0.04290472050892263, precision: 0.09292298117791858, , f1: 0.058621651930118916
+O => recall: 0.4856568139270077, precision: 0.9297176185376023, , f1: 0.6380232014043765
+best_mat
+----------------------------------
+cur_ind: 15
+grucrf_dropout: 0.4027073702509547, gruchar_dropout: 0.40722030346106025
+DO_FCN_GRUCRF: 0.4201223441775582, DO_FCN_CHAR: 0.5067884903347775
+grucrf_hidden_size: 8, hidden_size_char_gru: 8
+LR: 0.00020149823649125726
+best_score: 0.031589500007080086
+best_mat
+I => recall: 0.011842105263157893, precision: 5.712267704503316e-05, , f1: 0.00011361648642842456
+B => recall: 0.08344264294179173, precision: 0.0937397715370516, , f1: 0.08822069271505889
+O => recall: 0.0032283293013464372, precision: 0.9452008632544597, , f1: 0.0064341908197529515
+best_mat
+----------------------------------
+cur_ind: 16
+grucrf_dropout: 0.43220988880491, gruchar_dropout: 0.6919418572404226
+DO_FCN_GRUCRF: 0.5283303515254785, DO_FCN_CHAR: 0.5388982128846851
+grucrf_hidden_size: 8, hidden_size_char_gru: 8
+LR: 0.00135993046063136
+best_score: 0.3625544362505122
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.14134480403998997, precision: 0.16766082440393298, , f1: 0.15321103375361836
+O => recall: 0.9387704973948248, precision: 0.9301878609133832, , f1: 0.9344522749979182
+best_mat
+----------------------------------
+cur_ind: 17
+grucrf_dropout: 0.5274485043499625, gruchar_dropout: 0.6690516286968209
+DO_FCN_GRUCRF: 0.6456340147662832, DO_FCN_CHAR: 0.4792382978965736
+grucrf_hidden_size: 8, hidden_size_char_gru: 8
+LR: 8.294756611093342e-05
+best_score: 0.3008532268762585
+best_mat
+I => recall: 0.16680487984667552, precision: 0.0004991674714945015, , f1: 0.000994478223289005
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 0.873167467837292, precision: 0.9318892369355937, , f1: 0.9015652024054864
+best_mat
+----------------------------------
+cur_ind: 18
+grucrf_dropout: 0.4545848470425384, gruchar_dropout: 0.41696108261000137
+DO_FCN_GRUCRF: 0.572054078426718, DO_FCN_CHAR: 0.5301801206341488
+grucrf_hidden_size: 16, hidden_size_char_gru: 4
+LR: 0.00017442015536373528
+best_score: 0.25254962289704935
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.4054858136077916, precision: 0.06842998602403896, , f1: 0.11706068340294604
+O => recall: 0.4889067482631624, precision: 0.9287312429663198, , f1: 0.640588185288202
+best_mat
+----------------------------------
+cur_ind: 19
+grucrf_dropout: 0.5016198230288877, gruchar_dropout: 0.4196181602413297
+DO_FCN_GRUCRF: 0.40848217773322004, DO_FCN_CHAR: 0.6842611809591103
+grucrf_hidden_size: 16, hidden_size_char_gru: 8
+LR: 0.0026314767618472543
+best_score: 0.17724644978731519
+best_mat
+I => recall: 0.2352600250626566, precision: 0.00035786739476141973, , f1: 0.0007142048016080279
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 0.37446612063742934, precision: 0.9125863080760944, , f1: 0.5310251445603376
+best_mat
+----------------------------------
+cur_ind: 20
+grucrf_dropout: 0.5351423652452129, gruchar_dropout: 0.43390213043644404
+DO_FCN_GRUCRF: 0.5937536730235533, DO_FCN_CHAR: 0.5554437400631952
+grucrf_hidden_size: 4, hidden_size_char_gru: 4
+LR: 0.0009698876831537654

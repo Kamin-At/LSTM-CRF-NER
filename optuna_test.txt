@@ -1,0 +1,135 @@
+kernel_sizes: [3], gru_fcn_dropout: 0.18320421210443696
+gru_dropout: 0.20759298113432453, gru_out_dropout: 0.09191750022418677
+LR: 5.996823585156902e-05, grucrf_hidden_size: 64
+w_decay: -3
+kernel_sizes: [3], gru_fcn_dropout: 0.5471765688491098
+gru_dropout: 0.44663206204786315, gru_out_dropout: 0.44759167116405474
+LR: 8.775932869899642e-05, grucrf_hidden_size: 64
+w_decay: -4
+kernel_sizes: [5], gru_fcn_dropout: 0.3337108700123531
+gru_dropout: 0.322289249035986, gru_out_dropout: 0.16656573319576543
+LR: 7.606874620181364e-05, grucrf_hidden_size: 64
+w_decay: -4
+kernel_sizes: [5], gru_fcn_dropout: 0.30283021254704506
+gru_dropout: 0.2260320953992551, gru_out_dropout: 0.1507650466939578
+LR: 5.429501168666342e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: [3], gru_fcn_dropout: 0.08391811133623278
+gru_dropout: 0.20710731562148618, gru_out_dropout: 0.28841502627700805
+LR: 9.4518554352997e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: [5], gru_fcn_dropout: 0.5760041008491898
+gru_dropout: 0.39666171285242324, gru_out_dropout: 0.17348472291932615
+LR: 5.4236190636731174e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: [5], gru_fcn_dropout: 0.4644827806760693
+gru_dropout: 0.4731450719395307, gru_out_dropout: 0.42715955175599024
+LR: 6.185836452918055e-05, grucrf_hidden_size: 128
+w_decay: -3
+kernel_sizes: [3], gru_fcn_dropout: 0.5583749357519164
+gru_dropout: 0.14556265611582286, gru_out_dropout: 0.34542017194454183
+LR: 7.153050240798548e-05, grucrf_hidden_size: 128
+w_decay: -5
+kernel_sizes: [3], gru_fcn_dropout: 0.37585635496472286
+gru_dropout: 0.08404000021977392, gru_out_dropout: 0.1855831410578432
+LR: 7.623331951631144e-05, grucrf_hidden_size: 128
+w_decay: -3
+kernel_sizes: [5], gru_fcn_dropout: 0.14413958830279516
+gru_dropout: 0.11147777907279673, gru_out_dropout: 0.5646328398583492
+LR: 7.378443253417041e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: [3], gru_fcn_dropout: 0.07962328627055522
+gru_dropout: 0.4723581645903701, gru_out_dropout: 0.391398135004897
+LR: 8.473406064856742e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: [5], gru_fcn_dropout: 0.2388333633379693
+gru_dropout: 0.043635054622203656, gru_out_dropout: 0.3849917807406843
+LR: 5.1736973146709036e-05, grucrf_hidden_size: 128
+w_decay: -5
+kernel_sizes: [3], gru_fcn_dropout: 0.37431049284401285
+gru_dropout: 0.2812137983088291, gru_out_dropout: 0.21812848415046374
+LR: 5.148940566773775e-05, grucrf_hidden_size: 128
+w_decay: -3
+kernel_sizes: [3], gru_fcn_dropout: 0.2320713156546708
+gru_dropout: 0.6532835040250375, gru_out_dropout: 0.09056086236635234
+LR: 9.751355325099784e-05, grucrf_hidden_size: 128
+w_decay: -3
+kernel_sizes: [3], gru_fcn_dropout: 0.5729688867349111
+gru_dropout: 0.039554437560146954, gru_out_dropout: 0.5200072012083999
+LR: 6.846310356374212e-05, grucrf_hidden_size: 64
+w_decay: -4
+kernel_sizes: [5], gru_fcn_dropout: 0.2402728086583676
+gru_dropout: 0.03113698178377302, gru_out_dropout: 0.5471659380172325
+LR: 9.102862375096625e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: [5], gru_fcn_dropout: 0.16972126713851055
+gru_dropout: 0.314124975828957, gru_out_dropout: 0.5587498945258632
+LR: 8.165098347504301e-05, grucrf_hidden_size: 64
+w_decay: -4
+kernel_sizes: [5], gru_fcn_dropout: 0.6219049709440827
+gru_dropout: 0.4130512099508997, gru_out_dropout: 0.008108708514828
+LR: 6.641944472671951e-05, grucrf_hidden_size: 64
+w_decay: -5
+epoch: 0, score: 0.06556474932912322
+kernel_sizes: [3], gru_fcn_dropout: 0.04400653889210345
+gru_dropout: 0.07583009108868796, gru_out_dropout: 0.5067124057676508
+LR: 8.99895020993089e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: [3], gru_fcn_dropout: 0.4328347975923971
+gru_dropout: 0.27061685583125045, gru_out_dropout: 0.12318796188744027
+LR: 7.578752700947008e-05, grucrf_hidden_size: 128
+w_decay: -5
+kernel_sizes: [5], gru_fcn_dropout: 0.026658703460356214
+gru_dropout: 0.6023800703615053, gru_out_dropout: 0.25442982964747174
+LR: 5.826992948964409e-05, grucrf_hidden_size: 64
+w_decay: -3
+epoch: 0, score: 0.09386798386798385
+epoch: 1, score: 0.09702704702704702
+epoch: 2, score: 0.20258741258741256
+epoch: 3, score: 0.35402564911567197
+epoch: 4, score: 0.3651183410336675
+epoch: 5, score: 0.3655893303134703
+epoch: 6, score: 0.3568206315708688
+epoch: 7, score: 0.3767177645093474
+epoch: 8, score: 0.3538910600492921
+epoch: 9, score: 0.3703445479783815
+epoch: 10, score: 0.35384187626598856
+epoch: 11, score: 0.37503105010651
+epoch: 12, score: 0.35281724323306474
+cnt_mat
+I => : 0.0, : 0.0, : 0.0
+B => : 0.0, : 6.0, : 22.0
+O => : 0.0, : 18.0, : 245.0
+best_score: 0.3767177645093474
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.24783549783549785, precision: 0.25757575757575757, , f1: 0.23405483405483407
+O => recall: 0.8872173114847233, precision: 0.9133491788214241, , f1: 0.8960984594732082
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.48561307346038896
+gru_dropout: 0.1631586833708365, gru_out_dropout: 0.5260411511203078
+LR: 6.558108313992547e-05, grucrf_hidden_size: 128
+w_decay: -5
+epoch: 0, score: 0.16401175364023662
+epoch: 1, score: 0.3085453124923813
+epoch: 2, score: 0.31699187810287116
+epoch: 3, score: 0.31508622637714734
+epoch: 4, score: 0.310202030574935
+epoch: 5, score: 0.3179650544342368
+epoch: 6, score: 0.29709751398421264
+epoch: 7, score: 0.31405197273205004
+cnt_mat
+I => : 0.0, : 0.0, : 0.0
+B => : 0.0, : 0.0, : 28.0
+O => : 0.0, : 0.0, : 263.0
+best_score: 0.31699187810287116
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9084884941769465, , f1: 0.9509756343086134
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.396082374828882
+gru_dropout: 0.18223300436106493, gru_out_dropout: 0.47176340026705316
+LR: 8.81826236636394e-05, grucrf_hidden_size: 64
+w_decay: -4
+epoch: 0, score: 0.12174236643561598
+epoch: 1, score: 0.28303329430513796
+epoch: 2, score: 0.3113794383972396

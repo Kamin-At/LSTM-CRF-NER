@@ -1,0 +1,19 @@
+kernel_sizes: [3], gru_fcn_dropout: 0.2272287674142849
+gru_dropout: 0.5494176585798091, gru_out_dropout: 0.45003621827429685
+LR: 0.0009311652578438998, grucrf_hidden_size: 64
+w_decay: -4
+epoch: 0, score: 0.10980949269358974
+epoch: 1, score: 0.06746031746031746
+cur_trial: 2cnt_mat
+I => : 0.0, : 0.0, : 0.0
+B => : 41.0, : 7.0, : 0.0
+O => : 289.0, : 19.0, : 1.0
+best_score: 0.06746031746031746
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.17857142857142858, precision: 0.25, , f1: 0.19642857142857142
+O => recall: 0.00303951367781155, precision: 0.14285714285714285, , f1: 0.005952380952380953
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.3584175820727856
+gru_dropout: 0.4307916933939601, gru_out_dropout: 0.5939517866304904
+LR: 0.0006971988016095832, grucrf_hidden_size: 128
+w_decay: -4

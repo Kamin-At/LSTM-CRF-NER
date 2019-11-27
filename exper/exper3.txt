@@ -1,0 +1,199 @@
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0, size_char: 5
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.3098855868176693
+epoch: 3, score: 0.3133211309738329
+epoch: 6, score: 0.3134461267458782
+epoch: 9, score: 0.31338021134543853
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 172.0, : 33090.0
+O => : 0.0, : 5.0, : 221218.0
+best_score: 0.3134461267458782
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.005220512452413683, precision: 0.9049919484702094, , f1: 0.010346511699838669
+O => recall: 0.9999768925370769, precision: 0.8691962568224212, , f1: 0.9299918685377958
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.15, size_char: 5
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.3098760456527557
+epoch: 3, score: 0.31345557050822415
+epoch: 6, score: 0.3134230107357556
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 172.0, : 33090.0
+O => : 0.0, : 5.0, : 221218.0
+best_score: 0.31345557050822415
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.005230207391994449, precision: 0.8927536231884058, , f1: 0.010364383343397296
+O => recall: 0.9999777559444009, precision: 0.8692219312152958, , f1: 0.9300023281812752
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.3, size_char: 5
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.31308834935176677
+epoch: 3, score: 0.31307587907190565
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.31308834935176677
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.004706556696500786, precision: 0.8478260869565217, , f1: 0.009344386099494173
+O => recall: 0.9999958710103638, precision: 0.8690595953646285, , f1: 0.9299206619558061
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.45, size_char: 5
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.30987755007727225
+epoch: 3, score: 0.31342333429763297
+epoch: 6, score: 0.31336473190605524
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 172.0, : 33090.0
+O => : 0.0, : 5.0, : 221218.0
+best_score: 0.31344463658393107
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.005227626149601097, precision: 0.8138285024154589, , f1: 0.010356666437597212
+O => recall: 0.999977946367087, precision: 0.8691762709748156, , f1: 0.929977243314196
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.6, size_char: 5
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.3130739163474756
+epoch: 3, score: 0.3131067573986179
+epoch: 6, score: 0.3130184171505951
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.3131067573986179
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0046699085195237595, precision: 0.927536231884058, , f1: 0.009279370697676795
+O => recall: 1.0, precision: 0.8692556777532449, , f1: 0.9300409014981768
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0, size_char: 10
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.31302933165380803
+epoch: 3, score: 0.3130541832403247
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.3130988195918182
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0046797937445104, precision: 0.9130434782608695, , f1: 0.00929834820939605
+O => recall: 1.0, precision: 0.8691885163218953, , f1: 0.9299981105660585
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.15, size_char: 10
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.31303857482586966
+epoch: 3, score: 0.31304402894418304
+epoch: 6, score: 0.3130538948882577
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.3130931997119178
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0046819696962219735, precision: 0.8840579710144928, , f1: 0.009296609306801339
+O => recall: 1.0, precision: 0.8691841816017554, , f1: 0.929982989828952
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.3, size_char: 10
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.30989363249793894
+epoch: 3, score: 0.31306653702501214
+epoch: 6, score: 0.3130398840191498
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.31306653702501214
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.004663682273562194, precision: 0.8695652173913043, , f1: 0.009264822476778336
+O => recall: 1.0, precision: 0.8690943003138293, , f1: 0.9299347885982582
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.45, size_char: 10
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.3098740571372868
+epoch: 3, score: 0.3098655686304537
+epoch: 6, score: 0.3130445958611728
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.31305588266457457
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.004619644489614731, precision: 0.8985507246376812, , f1: 0.00918003768278876
+O => recall: 1.0, precision: 0.8691789313939651, , f1: 0.9299876103109349
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.6, size_char: 10
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.3130599012501412
+epoch: 3, score: 0.31301135984519196
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.3130599012501412
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.004621387276753125, precision: 0.9130434782608695, , f1: 0.009182754877734052
+O => recall: 1.0, precision: 0.8691843114738363, , f1: 0.9299969488726896
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0, size_char: 20
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.31306069717526924
+epoch: 3, score: 0.313048133745494
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.3130750830811508
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.004632101955873129, precision: 0.8985507246376812, , f1: 0.009206361065609165
+O => recall: 1.0, precision: 0.8692339982989237, , f1: 0.9300188881778433
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.15, size_char: 20
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.30986582450862415
+epoch: 3, score: 0.31304166167627695
+epoch: 6, score: 0.31307555016146454
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.3130878128999065
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.004685513351865736, precision: 0.8260869565217391, , f1: 0.009308248892819289
+O => recall: 1.0, precision: 0.8691273765910728, , f1: 0.9299551898069002
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.3, size_char: 20
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.30988007194304323
+epoch: 3, score: 0.31308645262395723
+epoch: 6, score: 0.3130731665063255
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.313104307375806
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.004672790114602728, precision: 0.927536231884058, , f1: 0.00928507408328737
+O => recall: 1.0, precision: 0.8692383916902717, , f1: 0.9300278480441306
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.45, size_char: 20
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.3098940623817153
+epoch: 3, score: 0.31304189633204454
+epoch: 6, score: 0.3129853171207305
+epoch: 9, score: 0.3130440402366134
+cnt_mat
+I => : 0.0, : 0.0, : 158.0
+B => : 0.0, : 153.0, : 33109.0
+O => : 0.0, : 0.0, : 221223.0
+best_score: 0.3130974669134189
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.004656913921264566, precision: 0.8840579710144928, , f1: 0.009250314275021381
+O => recall: 1.0, precision: 0.869257160281675, , f1: 0.9300420864652352
+----------------------------------
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.6, size_char: 20
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.30988338068035015
+epoch: 3, score: 0.313029257383525
+epoch: 6, score: 0.3130323339202702

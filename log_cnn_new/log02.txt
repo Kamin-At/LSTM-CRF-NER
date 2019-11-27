@@ -1,0 +1,17 @@
+cur_ind: 0
+grucrf_dropout: 0.4151421164467993, DO_FCN_GRUCRF: 0.3355654885917078
+grucrf_hidden_size: 128, LR: 5.197496032883616e-05, size_kernel: 5
+epoch: 0, score: 0.33900430307536866
+epoch: 2, score: 0.33902358469540556
+epoch: 4, score: 0.33901624738555225
+epoch: 6, score: 0.33904461181237694
+epoch: 8, score: 0.3390844995388392
+best_score: 0.3390844995388392
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.08380887545834687, precision: 0.0933967074592075, , f1: 0.08798622230341016
+O => recall: 0.9335320889630245, precision: 0.925088952742387, , f1: 0.9292672763131075
+----------------------------------
+cur_ind: 1
+grucrf_dropout: 0.3816208224089902, DO_FCN_GRUCRF: 0.47977640572033686
+grucrf_hidden_size: 128, LR: 4.466597377484454e-05, size_kernel: 5
+epoch: 0, score: 0.3630041569594123

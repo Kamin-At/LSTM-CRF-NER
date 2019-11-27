@@ -1,0 +1,53 @@
+cur_ind: 0
+grucrf_dropout: 0.5011049974287454, DO_FCN_GRUCRF: 0.4213359530706813
+grucrf_hidden_size: 128, LR: 0.001006651214547725
+best_score: 0.32011963076728805
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9237829270222496, , f1: 0.9603588923018642
+best_mat
+----------------------------------
+cur_ind: 1
+grucrf_dropout: 0.4670387477409881, DO_FCN_GRUCRF: 0.47420375249166313
+grucrf_hidden_size: 128, LR: 8.634796048601542e-05
+best_score: 0.32286387471436095
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.005248943336679233, precision: 0.10243492618492615, , f1: 0.009924030818166153
+O => recall: 0.9962915306085192, precision: 0.9238253191964629, , f1: 0.9586675933249167
+best_mat
+----------------------------------
+cur_ind: 2
+grucrf_dropout: 0.5894214242984992, DO_FCN_GRUCRF: 0.3795589194402997
+grucrf_hidden_size: 128, LR: 0.00023107396955997337
+best_score: 0.3201242530198228
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9238140752945098, , f1: 0.9603727590594683
+best_mat
+----------------------------------
+cur_ind: 3
+grucrf_dropout: 0.4824780069539003, DO_FCN_GRUCRF: 0.5368719204585851
+grucrf_hidden_size: 128, LR: 0.000436265930918973
+best_score: 0.36307390216747354
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.14202327381526286, precision: 0.16772463668098603, , f1: 0.15310509339727568
+O => recall: 0.9423341105028563, precision: 0.9300361576327373, , f1: 0.9361166131051448
+best_mat
+----------------------------------
+cur_ind: 4
+grucrf_dropout: 0.5983829936980466, DO_FCN_GRUCRF: 0.4930821669217408
+grucrf_hidden_size: 128, LR: 0.0007123991693514034
+best_score: 0.32012796918354847
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9238389363530014, , f1: 0.9603839075506454
+best_mat
+----------------------------------
+cur_ind: 5
+grucrf_dropout: 0.4623256461187265, DO_FCN_GRUCRF: 0.46641568438887226
+grucrf_hidden_size: 128, LR: 0.002046426326225573

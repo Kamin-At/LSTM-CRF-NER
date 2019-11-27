@@ -1,0 +1,971 @@
+kernel_sizes: [5], gru_fcn_dropout: 0.017293636934673694
+gru_dropout: 0.03373905225218846, gru_out_dropout: 0.09259391731154894
+LR: 0.000672709107707303, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30970538858560964
+epoch: 1, score: 0.30969921295344555
+epoch: 2, score: 0.3097400581469328
+epoch: 3, score: 0.3098406347232136
+epoch: 4, score: 0.30973094562347475
+cur_trial: 2cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098406347232136
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.868340396232336, , f1: 0.9295219041696408
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.0013379084065838105
+gru_dropout: 0.044947771075610425, gru_out_dropout: 0.07595100866941117
+LR: 0.0006208428544844831, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3132670749618652
+epoch: 1, score: 0.3098179513047994
+epoch: 2, score: 0.3097150033782003
+epoch: 3, score: 0.3097755667547751
+epoch: 4, score: 0.3097879738371896
+cur_trial: 3cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3132670749618652
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.004956530303174018, precision: 0.95, , f1: 0.00984577861164605
+O => recall: 1.0, precision: 0.8690990076123704, , f1: 0.9299554462739495
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.056723783715405464
+gru_dropout: 0.03001759672717113, gru_out_dropout: 0.01451004699017238
+LR: 0.000706280154085976, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30984207255859
+epoch: 1, score: 0.3098198443737909
+epoch: 2, score: 0.309826229043294
+epoch: 3, score: 0.30972015629352473
+epoch: 4, score: 0.30976526405241117
+cur_trial: 4cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30984207255859
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8683578914108165, , f1: 0.9295262176757699
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.036299073581663024
+gru_dropout: 0.014073098466273817, gru_out_dropout: 0.05835657339882602
+LR: 0.0006902201939725671, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.27479923290382563
+epoch: 1, score: 0.3097752361705554
+epoch: 2, score: 0.3097572337618857
+epoch: 3, score: 0.3097883699278446
+epoch: 4, score: 0.30976475167194667
+cur_trial: 5cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3097883699278446
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8680669838822643, , f1: 0.9293651097835338
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.5963886905034512
+gru_dropout: 0.19493514949274077, gru_out_dropout: 0.031035433169856606
+LR: 0.0006701450428401135, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30983317233768765
+epoch: 1, score: 0.3098126724534308
+epoch: 2, score: 0.3097562871290097
+epoch: 3, score: 0.3096917401566956
+epoch: 4, score: 0.30966345893467256
+cur_trial: 6cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30983317233768765
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8683049936481524, , f1: 0.929499517013063
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.27315092792255397
+gru_dropout: 0.08172599659496263, gru_out_dropout: 0.04544020092760821
+LR: 0.0005616680019103719, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30978949765192737
+epoch: 1, score: 0.30981685770946865
+epoch: 2, score: 0.30980590336986386
+epoch: 3, score: 0.3098148684348792
+epoch: 4, score: 0.30983624874343624
+cur_trial: 7cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30983624874343624
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8683134152914714, , f1: 0.9295087462303087
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.007969701371165289
+gru_dropout: 0.05013244717146852, gru_out_dropout: 0.09851955829863476
+LR: 0.0006004534424953352, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30982011164992546
+epoch: 1, score: 0.30980908529590095
+epoch: 2, score: 0.3097924877042289
+epoch: 3, score: 0.30976212838535216
+epoch: 4, score: 0.30977429576035864
+cur_trial: 8cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30982011164992546
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8682447857982236, , f1: 0.9294603349497764
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.043648154802421554
+gru_dropout: 0.02467945267739639, gru_out_dropout: 0.11805482094495953
+LR: 0.0007172990771807813, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.28621160969501547
+epoch: 1, score: 0.28116695756755444
+epoch: 2, score: 0.28127220132272407
+epoch: 3, score: 0.2813741025776136
+epoch: 4, score: 0.28080342656012364
+cur_trial: 9cnt_mat
+I => : 0.0, : 29.0, : 46.0
+B => : 0.0, : 6324.0, : 7012.0
+O => : 0.0, : 43160.0, : 45100.0
+best_score: 0.28621160969501547
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.558281084829595, precision: 0.14197852699017613, , f1: 0.22619303176821806
+O => recall: 0.49351640287111476, precision: 0.8803013187668783, , f1: 0.6324417973168284
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.20752391859353056
+gru_dropout: 0.013877771896227492, gru_out_dropout: 0.07205264340567519
+LR: 0.0007314152041292357, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3459201801748601
+epoch: 1, score: 0.31339304252413436
+epoch: 2, score: 0.31322593091949075
+epoch: 3, score: 0.31308770887681814
+epoch: 4, score: 0.3133000763660942
+epoch: 5, score: 0.3131090681635392
+cur_trial: 10cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 67.0, : 13269.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3459201801748601
+I => recall: 0.016666666666666666, precision: 0.01, , f1: 0.0125
+B => recall: 0.08036395343141167, precision: 0.20196953781512605, , f1: 0.11486075493750578
+O => recall: 0.9517718506846513, precision: 0.8725140755487464, , f1: 0.9103997855870745
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.3180705602232963
+gru_dropout: 0.0640710676768598, gru_out_dropout: 0.13171376847483818
+LR: 0.0006200522351027306, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3413005388430086
+epoch: 1, score: 0.3412345999006106
+epoch: 2, score: 0.34100502037611563
+epoch: 3, score: 0.3409918966559154
+epoch: 4, score: 0.341354729180259
+epoch: 5, score: 0.34155105405825953
+epoch: 6, score: 0.3405811859319201
+epoch: 7, score: 0.3410551840478762
+epoch: 8, score: 0.3408868086241292
+epoch: 9, score: 0.3407958641284928
+epoch: 10, score: 0.3414915764923907
+epoch: 11, score: 0.3413224379196182
+epoch: 12, score: 0.31392210823870337
+epoch: 13, score: 0.31315067755441434
+epoch: 14, score: 0.3133178903665528
+epoch: 15, score: 0.3133358799034652
+epoch: 16, score: 0.3133084742544209
+cur_trial: 11cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 67.0, : 13269.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.34155105405825953
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0798130142970816, precision: 0.2011817226890756, , f1: 0.11422776260223981
+O => recall: 0.9522980205288274, precision: 0.8720984709497598, , f1: 0.9104253995725387
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.11131902961548643
+gru_dropout: 0.3914528253158571, gru_out_dropout: 3.058540775437851e-05
+LR: 0.0007562661883799257, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3098318449869622
+epoch: 1, score: 0.3098462154001444
+epoch: 2, score: 0.3096415820637363
+epoch: 3, score: 0.3098172758834215
+epoch: 4, score: 0.3098758820679929
+cur_trial: 12cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098758820679929
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8685512104271462, , f1: 0.9296276462039786
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.1248248231184596
+gru_dropout: 0.43338204587543894, gru_out_dropout: 0.08703757213864056
+LR: 0.0007390311397161637, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30980076179318433
+epoch: 1, score: 0.3098446877884737
+epoch: 2, score: 0.3097775208837737
+epoch: 3, score: 0.30970385774198256
+epoch: 4, score: 0.3096948802195562
+cur_trial: 13cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098446877884737
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.868382286446695, , f1: 0.9295340633654211
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.09521552789650194
+gru_dropout: 0.4904525625645615, gru_out_dropout: 0.06324016014895514
+LR: 0.0007009798177675202, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3385281682485049
+epoch: 1, score: 0.3097369449638602
+epoch: 2, score: 0.30978491489861754
+epoch: 3, score: 0.3098852458909144
+epoch: 4, score: 0.3097308574377006
+epoch: 5, score: 0.30977057268620367
+cur_trial: 14cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3385281682485049
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.07357109855200338, precision: 0.18801457946654437, , f1: 0.10572634375970429
+O => recall: 0.9521595038924666, precision: 0.8711736873143925, , f1: 0.9098581609858105
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.1837085844856951
+gru_dropout: 0.47281232160016184, gru_out_dropout: 0.10726804257238975
+LR: 0.0006855348317069403, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.23815884708157511
+epoch: 1, score: 0.371891063827923
+epoch: 2, score: 0.37410654022680695
+epoch: 3, score: 0.3748683977838863
+epoch: 4, score: 0.37485639850469776
+epoch: 5, score: 0.3745695941204612
+epoch: 6, score: 0.37524822638577704
+epoch: 7, score: 0.31323464299195397
+epoch: 8, score: 0.31333101254220924
+epoch: 9, score: 0.3130992028457496
+epoch: 10, score: 0.31333704642615096
+epoch: 11, score: 0.31335306986396927
+cur_trial: 15cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 67.0, : 13269.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.37524822638577704
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.14474799676104547, precision: 0.3599527310924369, , f1: 0.20609188745475177
+O => recall: 0.9615294061349667, precision: 0.8813148739193636, , f1: 0.9196527917025794
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.18668367415881193
+gru_dropout: 0.03867963208227875, gru_out_dropout: 0.10597287246932109
+LR: 0.0006822792817422833, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.309828652150699
+epoch: 1, score: 0.3097624594305742
+epoch: 2, score: 0.3096688329800032
+epoch: 3, score: 0.3097332762853204
+epoch: 4, score: 0.30980793848942656
+cur_trial: 16cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.309828652150699
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.868284039778392, , f1: 0.929485956452097
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.1888744044546635
+gru_dropout: 0.4949129354373243, gru_out_dropout: 0.0819616427531098
+LR: 0.000648221204198899, grucrf_hidden_size: 128
+w_decay: -4
+epoch: 0, score: 0.30970881439071035
+epoch: 1, score: 0.30980596218999285
+epoch: 2, score: 0.3097598595277458
+epoch: 3, score: 0.30976572422867465
+epoch: 4, score: 0.30984429825243087
+cur_trial: 17cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30984429825243087
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8683655741295869, , f1: 0.9295328947572926
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.23150227276584076
+gru_dropout: 0.009251148968925677, gru_out_dropout: 0.047571384614916765
+LR: 0.0006644528361599063, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.2681057166343237
+epoch: 1, score: 0.30980170308646865
+epoch: 2, score: 0.30964190635798833
+epoch: 3, score: 0.3098109697562454
+epoch: 4, score: 0.3097080842105631
+cur_trial: 18cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098109697562454
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8681884277519579, , f1: 0.9294329092687361
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.17481082223737732
+gru_dropout: 0.4567791807416579, gru_out_dropout: 0.09585394230780636
+LR: 0.000692758141712966, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.28036661490649034
+epoch: 1, score: 0.2773275070011063
+epoch: 2, score: 0.27733321896921964
+epoch: 3, score: 0.27748185774765305
+epoch: 4, score: 0.2778413418322277
+cur_trial: 19cnt_mat
+I => : 0.0, : 46.0, : 29.0
+B => : 0.0, : 6101.0, : 7235.0
+O => : 0.0, : 43433.0, : 44827.0
+best_score: 0.28036661490649034
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.5261846409460255, precision: 0.13487725350495075, , f1: 0.2146488586704797
+O => recall: 0.48899106673365267, precision: 0.8714379128450972, , f1: 0.6264509860489914
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.07348703773549582
+gru_dropout: 0.4818432598437699, gru_out_dropout: 0.10800539808203095
+LR: 0.0007227862697108001, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30977677160228906
+epoch: 1, score: 0.3097484969767211
+epoch: 2, score: 0.30981331259962364
+epoch: 3, score: 0.30977127436175195
+epoch: 4, score: 0.3098018916406206
+cur_trial: 20cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30981331259962364
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8681959212597377, , f1: 0.9294399377988709
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.1699570605489878
+gru_dropout: 0.46572215494605435, gru_out_dropout: 0.13956342714010256
+LR: 0.0007492943016192189, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.37238325941617384
+epoch: 1, score: 0.37221365983337656
+epoch: 2, score: 0.3723404677995217
+epoch: 3, score: 0.3726087244474105
+epoch: 4, score: 0.371755950784269
+epoch: 5, score: 0.37227998220440933
+epoch: 6, score: 0.3721524661304369
+epoch: 7, score: 0.372359476562331
+epoch: 8, score: 0.3721283356615721
+epoch: 9, score: 0.37274155973929685
+epoch: 10, score: 0.372191796058377
+epoch: 11, score: 0.3719557548951542
+epoch: 12, score: 0.30971351677377373
+epoch: 13, score: 0.30974814965565084
+epoch: 14, score: 0.30991931485694796
+epoch: 15, score: 0.30984055587965614
+epoch: 16, score: 0.3098102077994746
+cur_trial: 21cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.37274155973929685
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.13911621393549362, precision: 0.35252136039968335, , f1: 0.19931389361735327
+O => recall: 0.9614867323418833, precision: 0.8799694019556149, , f1: 0.9189107856005373
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.2560881516638859
+gru_dropout: 0.5360768209661014, gru_out_dropout: 0.07669715598067017
+LR: 0.0009816497413185883, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3098646361292689
+epoch: 1, score: 0.30978291557069065
+epoch: 2, score: 0.30977043099513185
+epoch: 3, score: 0.30975297484246717
+epoch: 4, score: 0.3096448528726888
+cur_trial: 22cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098646361292689
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8684763060668569, , f1: 0.9295939083878068
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.1442323250173266
+gru_dropout: 0.1004031348622978, gru_out_dropout: 0.01611617864130438
+LR: 0.0008258761596148979, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30977780503416263
+epoch: 1, score: 0.30961255226699563
+epoch: 2, score: 0.3096358897568848
+epoch: 3, score: 0.3098205155967326
+epoch: 4, score: 0.3098558487903578
+cur_trial: 23cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098558487903578
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8684283938169335, , f1: 0.9295675463710735
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.12064373096589176
+gru_dropout: 0.05172472943006343, gru_out_dropout: 0.036684822246186716
+LR: 0.000773758067402971, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3097840390371689
+epoch: 1, score: 0.3098227709075267
+epoch: 2, score: 0.30977254453292574
+epoch: 3, score: 0.3097643426272438
+epoch: 4, score: 0.30976515789120823
+cur_trial: 24cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098227709075267
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8682600646719477, , f1: 0.92946831272258
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.02075030420448861
+gru_dropout: 0.07335615708496239, gru_out_dropout: 0.15511918906518898
+LR: 0.0008091686048824491, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30974641979028833
+epoch: 1, score: 0.30981921114181693
+epoch: 2, score: 0.3096783297544051
+epoch: 3, score: 0.3098033161335179
+epoch: 4, score: 0.30977557153945434
+cur_trial: 25cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30981921114181693
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8682370264252961, , f1: 0.9294576334254507
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.040967073189558355
+gru_dropout: 0.030020544708237114, gru_out_dropout: 0.16891272265507354
+LR: 0.0008451492015912589, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3346951807099734
+epoch: 1, score: 0.3657729849760171
+epoch: 2, score: 0.3257805385557628
+epoch: 3, score: 0.32627009415950686
+epoch: 4, score: 0.32606239744301285
+epoch: 5, score: 0.32609433426927353
+epoch: 6, score: 0.3260781555306285
+cur_trial: 26cnt_mat
+I => : 14.0, : 1.0, : 60.0
+B => : 986.0, : 800.0, : 11550.0
+O => : 4213.0, : 4479.0, : 79568.0
+best_score: 0.3657729849760171
+I => recall: 0.17722222222222225, precision: 0.002603736170721086, , f1: 0.005091765111122276
+B => recall: 0.19356836604574598, precision: 0.2489853561416365, , f1: 0.2176700589866741
+O => recall: 0.8637958196794446, precision: 0.8856265830634612, , f1: 0.874557130830255
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.08240190925820809
+gru_dropout: 0.08479178811459095, gru_out_dropout: 0.20868272434037755
+LR: 0.0007286329056396344, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.2723432571822207
+epoch: 1, score: 0.3653751002977163
+epoch: 2, score: 0.3739745160555221
+epoch: 3, score: 0.37522092533973495
+epoch: 4, score: 0.3745278030750214
+epoch: 5, score: 0.37448804714439365
+epoch: 6, score: 0.37432846478365867
+epoch: 7, score: 0.37438690051676016
+epoch: 8, score: 0.3743218212253406
+epoch: 9, score: 0.3746445491541635
+epoch: 10, score: 0.3743885780670883
+epoch: 11, score: 0.30979969596575035
+epoch: 12, score: 0.3097061067911814
+epoch: 13, score: 0.3097462225203077
+epoch: 14, score: 0.3097386388682875
+epoch: 15, score: 0.3098228954057845
+cur_trial: 27cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.37522092533973495
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.1441884539130916, precision: 0.3620535714285714, , f1: 0.20613956568656602
+O => recall: 0.9617453244660326, precision: 0.880873286211527, , f1: 0.9195232103326388
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.08417513115130654
+gru_dropout: 0.01895140907592137, gru_out_dropout: 0.2600713309007886
+LR: 0.0007285328463822696, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30981190089630967
+epoch: 1, score: 0.30981902161850666
+epoch: 2, score: 0.30986729739209956
+epoch: 3, score: 0.30985783864842265
+epoch: 4, score: 0.3098195589930348
+cur_trial: 28cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30981902161850666
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8682322554801839, , f1: 0.9294570648555199
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.10205334350571107
+gru_dropout: 0.001498999983843119, gru_out_dropout: 0.21918488969962938
+LR: 0.0008578137947383514, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.34134174819901947
+epoch: 1, score: 0.3097795511817503
+epoch: 2, score: 0.3097028167683055
+epoch: 3, score: 0.3097584910299543
+epoch: 4, score: 0.30977866766236456
+epoch: 5, score: 0.30983064742873917
+cur_trial: 29cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.34134174819901947
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.07949351193842358, precision: 0.1998686974789916, , f1: 0.11367836996645317
+O => recall: 0.9521689635410487, precision: 0.8720679324961995, , f1: 0.9103468746306052
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.05912766008025999
+gru_dropout: 0.06682678015258173, gru_out_dropout: 0.2438803363293267
+LR: 0.0007119704653317701, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.33852386152552244
+epoch: 1, score: 0.33881026674998727
+epoch: 2, score: 0.3097810151542925
+epoch: 3, score: 0.30986124282766186
+epoch: 4, score: 0.3096096001674793
+epoch: 5, score: 0.30967469618106996
+epoch: 6, score: 0.3098338098293743
+cur_trial: 30cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.33881026674998727
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.07415527438086308, precision: 0.1890854879017982, , f1: 0.1064697159242712
+O => recall: 0.9521628156259663, precision: 0.8713688768428038, , f1: 0.9099610843256907
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.11081361828655326
+gru_dropout: 0.04573293966258767, gru_out_dropout: 0.2873355084496017
+LR: 0.0005770732635646554, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3096727569791274
+epoch: 1, score: 0.3097714109862142
+epoch: 2, score: 0.30981425826264275
+epoch: 3, score: 0.30966745903843496
+epoch: 4, score: 0.30975024748083485
+cur_trial: 31cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30981425826264275
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8682250537189109, , f1: 0.9294427747879282
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.12795228068997
+gru_dropout: 0.16204415294011967, gru_out_dropout: 0.14794027977770022
+LR: 0.000763000763697138, grucrf_hidden_size: 64
+w_decay: 0
+epoch: 0, score: 0.3097702189952767
+epoch: 1, score: 0.31343145832636726
+epoch: 2, score: 0.313212238796181
+epoch: 3, score: 0.30985997426735995
+epoch: 4, score: 0.30982041244088926
+cur_trial: 32cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.31343145832636726
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.005175928456628112, precision: 1.0, , f1: 0.010286359778728688
+O => recall: 1.0, precision: 0.8692051136561172, , f1: 0.9300080152003731
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.08231090046344886
+gru_dropout: 0.02158814291847765, gru_out_dropout: 0.17625986465153004
+LR: 0.0007348526978746519, grucrf_hidden_size: 64
+w_decay: 0
+epoch: 0, score: 0.3098404878353293
+epoch: 1, score: 0.3097094806372787
+epoch: 2, score: 0.30973898656827703
+epoch: 3, score: 0.30975967530156107
+epoch: 4, score: 0.30975410454124497
+cur_trial: 33cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098404878353293
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8683558281899828, , f1: 0.9295214635059879
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.011212945344614283
+gru_dropout: 0.040934008774621014, gru_out_dropout: 0.09083235950503168
+LR: 0.0007236063646917339, grucrf_hidden_size: 64
+w_decay: -4
+epoch: 0, score: 0.30981384215339447
+epoch: 1, score: 0.30984064978754194
+epoch: 2, score: 0.309786676164358
+epoch: 3, score: 0.31315517713927105
+epoch: 4, score: 0.3132529731847838
+cur_trial: 34cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 67.0, : 13269.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3132529731847838
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.005090750561956204, precision: 1.0, , f1: 0.01012016543791135
+O => recall: 1.0, precision: 0.8685530581249639, , f1: 0.9296387541164399
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.07144235935850016
+gru_dropout: 0.05492114278885505, gru_out_dropout: 0.20977014179074616
+LR: 0.0007420190184551956, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3098068616630942
+epoch: 1, score: 0.30983369911746655
+epoch: 2, score: 0.3097794304185186
+epoch: 3, score: 0.30982505580726055
+epoch: 4, score: 0.30980891265521276
+cur_trial: 35cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30983369911746655
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8683087416034085, , f1: 0.9295010973523997
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.0461963927693177
+gru_dropout: 0.32427232099308123, gru_out_dropout: 0.13090663832366722
+LR: 0.000697309072348644, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.33915588836037913
+epoch: 1, score: 0.3387865077287289
+epoch: 2, score: 0.30977274089178075
+epoch: 3, score: 0.3098121088001655
+epoch: 4, score: 0.3097187389584198
+epoch: 5, score: 0.30978800881320967
+epoch: 6, score: 0.30974469663297666
+cur_trial: 36cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.33915588836037913
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.07482825838946805, precision: 0.18993778763309133, , f1: 0.10731360417116671
+O => recall: 0.9522348763228343, precision: 0.8716545528701504, , f1: 0.9101540609099708
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.21313328785195648
+gru_dropout: 0.010046707143420368, gru_out_dropout: 0.1137772988604353
+LR: 0.0007539338228743595, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30978583384172
+epoch: 1, score: 0.30982290381537153
+epoch: 2, score: 0.309813719335217
+epoch: 3, score: 0.3097230926158889
+epoch: 4, score: 0.30987087636679855
+cur_trial: 37cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30987087636679855
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.868508843591268, , f1: 0.9296126291003957
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.027435217518367895
+gru_dropout: 0.3550396566044476, gru_out_dropout: 0.15855256726108072
+LR: 0.0007131813830324852, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30981476124711854
+epoch: 1, score: 0.30972600698784664
+epoch: 2, score: 0.3097100943119922
+epoch: 3, score: 0.3097927576070724
+epoch: 4, score: 0.30991046620020263
+cur_trial: 38cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30991046620020263
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8687275069493445, , f1: 0.9297313986006079
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.09218544706488294
+gru_dropout: 0.03227641329589255, gru_out_dropout: 0.04343146539430044
+LR: 0.0006763638628198436, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.220185108914436
+epoch: 1, score: 0.22471761094663292
+epoch: 2, score: 0.23312615209795876
+epoch: 3, score: 0.2772340392148253
+epoch: 4, score: 0.33348874393769656
+epoch: 5, score: 0.3249041014636915
+epoch: 6, score: 0.3225425167464227
+epoch: 7, score: 0.3183960636940199
+epoch: 8, score: 0.3182929066310418
+epoch: 9, score: 0.31905282772944926
+cur_trial: 39cnt_mat
+I => : 1.0, : 0.0, : 74.0
+B => : 51.0, : 128.0, : 13157.0
+O => : 50.0, : 41.0, : 88169.0
+best_score: 0.33348874393769656
+I => recall: 0.31594155844155847, precision: 0.001902993224571688, , f1: 0.0037752594808881574
+B => recall: 0.21174729764349215, precision: 0.19190291464712678, , f1: 0.20114682916929577
+O => recall: 0.723660388443253, precision: 0.8833827675873559, , f1: 0.7955441431629058
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.22789659117760463
+gru_dropout: 0.08635040594105121, gru_out_dropout: 0.1420680546528854
+LR: 0.0006909895669783315, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.10353903759264793
+epoch: 1, score: 0.30982363265002094
+epoch: 2, score: 0.3098265630461747
+epoch: 3, score: 0.3097691251231151
+epoch: 4, score: 0.30965028960384
+cur_trial: 40cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098265630461747
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8682744540765498, , f1: 0.9294796891385241
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.2250487662964791
+gru_dropout: 0.06002620566157604, gru_out_dropout: 0.1292120459307386
+LR: 0.0008024561715174995, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.09873088354019843
+epoch: 1, score: 0.3097892709934977
+epoch: 2, score: 0.3098047876747383
+epoch: 3, score: 0.3097902722522593
+epoch: 4, score: 0.3097835332183512
+cur_trial: 41cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098047876747383
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8681610733479397, , f1: 0.9294143630242149
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.5288305086790472
+gru_dropout: 0.018213759556389313, gru_out_dropout: 0.11214397724880518
+LR: 0.0007201847559213366, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.1494858509814965
+epoch: 1, score: 0.34071908306565374
+epoch: 2, score: 0.34088329288572633
+epoch: 3, score: 0.3409364176656451
+epoch: 4, score: 0.34136385845124534
+epoch: 5, score: 0.34115042542389373
+epoch: 6, score: 0.34138106822239506
+epoch: 7, score: 0.34102323556383835
+epoch: 8, score: 0.3412477820380449
+epoch: 9, score: 0.3413196234661245
+epoch: 10, score: 0.3406853682823053
+epoch: 11, score: 0.34117402413131176
+epoch: 12, score: 0.34076094050709466
+epoch: 13, score: 0.3409532667270052
+epoch: 14, score: 0.34151327574222146
+epoch: 15, score: 0.32787503737642565
+epoch: 16, score: 0.3186517501069019
+epoch: 17, score: 0.31306336566878923
+epoch: 18, score: 0.3131637822173255
+epoch: 19, score: 0.3133256418587199
+cur_trial: 42cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 67.0, : 13269.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.34151327574222146
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.07952584471377741, precision: 0.20091911764705878, , f1: 0.11391114353803182
+O => recall: 0.9524839452003574, precision: 0.8723167377699452, , f1: 0.9106286836886326
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.0971889406197615
+gru_dropout: 0.44907486638402194, gru_out_dropout: 0.08389969535553493
+LR: 0.0007398267633087239, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3132478349919626
+epoch: 1, score: 0.309882338471491
+epoch: 2, score: 0.30983512692472553
+epoch: 3, score: 0.30983237801305097
+epoch: 4, score: 0.30974473640613814
+cur_trial: 43cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3132478349919626
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.005004277935369424, precision: 1.0, , f1: 0.009942820484549721
+O => recall: 1.0, precision: 0.8688380515574655, , f1: 0.9298006844913381
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.18808121866237296
+gru_dropout: 0.1120055513967606, gru_out_dropout: 0.17069253287399558
+LR: 0.0007726210494394924, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30970703508994657
+epoch: 1, score: 0.30977411276474487
+epoch: 2, score: 0.3098188747191709
+epoch: 3, score: 0.3097574862941514
+epoch: 4, score: 0.30986136037553663
+cur_trial: 44cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30986136037553663
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8684626474034685, , f1: 0.92958408112661
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.08064765615573301
+gru_dropout: 0.2312737019579053, gru_out_dropout: 0.0069464794805885865
+LR: 0.0007827605082201861, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3098270412281175
+epoch: 1, score: 0.3097770978094792
+epoch: 2, score: 0.30968928582571614
+epoch: 3, score: 0.3096311588701742
+epoch: 4, score: 0.3097063821065302
+cur_trial: 45cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098270412281175
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8682945231788072, , f1: 0.9294811236843525
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.12212438103884787
+gru_dropout: 0.07177777594886613, gru_out_dropout: 0.030534611396011394
+LR: 0.0007536172168224703, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30986473336179227
+epoch: 1, score: 0.3097486638020997
+epoch: 2, score: 0.3097447135386103
+epoch: 3, score: 0.3097130307585219
+epoch: 4, score: 0.30976032680216403
+cur_trial: 46cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30986473336179227
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8684822633750556, , f1: 0.9295942000853767
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.15722726614573274
+gru_dropout: 0.1475654776175575, gru_out_dropout: 0.1002388915274559
+LR: 0.0007095218414134051, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.30986596798971555
+epoch: 1, score: 0.3098169276483849
+epoch: 2, score: 0.3096696857480231
+epoch: 3, score: 0.30974790263733937
+epoch: 4, score: 0.30973012634980984
+cur_trial: 47cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.30986596798971555
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.868473723813819, , f1: 0.9295979039691467
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.13656028173521212
+gru_dropout: 0.19011758121610714, gru_out_dropout: 0.055929965246454966
+LR: 0.0007311429786393045, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3097233368352818
+epoch: 1, score: 0.3097496543018918
+epoch: 2, score: 0.3097932205796549
+epoch: 3, score: 0.3098125887879839
+epoch: 4, score: 0.30976041880672905
+cur_trial: 48cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098125887879839
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8682062821352983, , f1: 0.9294377663639517
+----------------------------------
+kernel_sizes: [3], gru_fcn_dropout: 0.24190943060599412
+gru_dropout: 0.2593594270653641, gru_out_dropout: 0.0018935096101204906
+LR: 0.0007496870958499097, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.22417382765749386
+epoch: 1, score: 0.3098323930467107
+epoch: 2, score: 0.30977265244300384
+epoch: 3, score: 0.30982477312498147
+epoch: 4, score: 0.3098290103447963
+cur_trial: 49cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3098323930467107
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8683124005402789, , f1: 0.929497179140132
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.21325018424157083
+gru_dropout: 0.48575984537072386, gru_out_dropout: 0.14874605605262917
+LR: 0.0007180461361767249, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.2780010990522746
+epoch: 1, score: 0.277899313611745
+epoch: 2, score: 0.3097559202713463
+epoch: 3, score: 0.3097381459243447
+epoch: 4, score: 0.3097146890942171
+cur_trial: 50cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3097559202713463
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.8679117127291901, , f1: 0.929267760814039
+----------------------------------
+kernel_sizes: [5], gru_fcn_dropout: 0.12047305405196673
+gru_dropout: 0.3963815174713048, gru_out_dropout: 0.020373359752186078
+LR: 0.0009302491691384234, grucrf_hidden_size: 128
+w_decay: 0
+epoch: 0, score: 0.3132580424896394
+epoch: 1, score: 0.30967639209117387
+epoch: 2, score: 0.3097032290001391
+epoch: 3, score: 0.3096816418874938
+epoch: 4, score: 0.3096041104584292
+cur_trial: 51cnt_mat
+I => : 0.0, : 0.0, : 75.0
+B => : 0.0, : 0.0, : 13336.0
+O => : 0.0, : 0.0, : 88260.0
+best_score: 0.3132580424896394
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.00501576877174367, precision: 1.0, , f1: 0.009971326089066968
+O => recall: 1.0, precision: 0.8688399110232256, , f1: 0.9298028013798513
+----------------------------------

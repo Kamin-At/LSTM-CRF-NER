@@ -1,0 +1,5 @@
+cur_ind: 0
+grucrf_dropout: 0.14326843387194557, gruchar_dropout: 0.31335801415169917
+DO_FCN_GRUCRF: 0.28526220543517633, DO_FCN_CHAR: 0.27358463705757075
+grucrf_hidden_size: 16, hidden_size_char_gru: 32
+LR: 0.0006843180122264484

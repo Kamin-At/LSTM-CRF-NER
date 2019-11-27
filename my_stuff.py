@@ -12,14 +12,18 @@ import torch.nn.functional as F
 import torch.optim as optim
 from allennlp.modules.conditional_random_field import ConditionalRandomField
 from allennlp.modules.conditional_random_field import allowed_transitions
+from allennlp.modules.lstm_cell_with_projection import LstmCellWithProjection
 from torch.utils.data import Dataset, DataLoader, random_split
 #from torchcrf import CRF
 from torch.utils.data.sampler import SubsetRandomSampler
 import random
 
+from torch.nn.utils.rnn import PackedSequence
+from typing import *
+
 from sklearn.metrics import confusion_matrix
 #from sklearn_crfsuite import metrics
-
+from torchnlp.nn import WeightDropGRU
 from RULE import RULEs
 from POSMap import POSMAP
 
@@ -53,6 +57,7 @@ class MyDataloader(Dataset):
         Label = [float(word.strip()) for word in self.Label_DF['text'][Index].strip().split(self.delimiter)]
         mask = [1.0]*len(all_words)
         POS = [pos.strip() for pos in self.pos_DF['text'][Index].strip().split(self.delimiter)]
+        tmp_length = len(all_words)
         if len(all_words) < self.Len_word_vec:
             Label = Label + [3.0]*(self.Len_word_vec - len(all_words))
             mask = mask + [0.0]*(self.Len_word_vec - len(all_words))
@@ -67,7 +72,7 @@ class MyDataloader(Dataset):
         # print('----------')
         return (char_embed.to(self.device), word_embed.to(self.device), \
                 torch.tensor(Label).to(self.device), torch.tensor(mask).to(self.device), \
-                len(all_words), pos_embed.float().to(device))
+                tmp_length, pos_embed.float().to(self.device))
     
 
 class CharEmbedding():
@@ -147,10 +152,17 @@ class POSEmbedding():
                 tmp_list.append(tmp_data)
         return torch.tensor(tmp_list)
 
-#############################
-
 #new
 ############### RNN encoding ######################
+# class CNN_char(nn.Module):
+#     def __init__(self, num_filter: '()'):
+
+#         class My2DConv(nn.Module):
+#     def __init__(self, num_filter: '(int) number of filters', use_BN: '(bool) if True, use 2d-batchnorm after linear conv',\
+#                  activation_func: '(bool) if True, use RELU after BN', input_channel: '(int) number of input channels', \
+#                  kernel_size: '(tuple): (width, height) size of the kernels', same_padding: '(bool) if True, input_w,input_h=output_w,output_h'):
+#         super().__init__()
+
 class RNN_char(nn.Module):
     def __init__(self, num_char_vec_features, hidden_size, num_layers, dropout_gru, bidirectional, \
                 output_size, dropout_FCN, num_word):
@@ -209,6 +221,51 @@ class over_all_NER2(nn.Module):
         tmp_gru_crf = self.gru_crf_layer.predict((tmp_compute, x[4]), x[3].long())
         return tmp_gru_crf
 
+class CNN_GRU_CRF(nn.Module):
+    def __init__(self, Batch_size: '(int)',\
+                 max_num_char: '(int)',\
+                 nums_filter: '(list[int] see in overall_char_embedding)',
+                 use_BN: '(bool) only for CNNchar',
+                 activation_func: '(bool) only for CNNchar',
+                 input_channel: '(int) see in My2DConv',
+                 kernel_sizes: '(list[int]) list of size of kernels used, and they will be computed concurrently',
+                 same_padding: '(bool) same padding for CNNchar',
+                 num_char_encoding_size: '(int) size of each char embedding vector',\
+                 output_size: '(int) output dimension of CNNchar',\
+                 size_of_embedding: '(int) size of each word embedding vector',\
+                 num_words: '(int) see in overall_char_embedding', \
+                 gru_hidden_size: '(int) see in gru_crf', \
+                 dropout_gru: '(double) see in gru_crf', \
+                 bidirectional: '(bool)', \
+                 tags: '(dict[int: str]) see in gru_crf', DO_FCN_GRUCRF: '(double)',\
+                 pos_size: '(int) size of pos embedding',\
+                 FCN: '(bool) see overall_char_embedding'):
+        super().__init__()
+        if not FCN:
+            output_size = num_char_encoding_size
+        #print(f'output_size: {output_size}')
+        self.overall_char_embedding = overall_char_embedding((Batch_size, output_size), max_num_char, \
+                                                             nums_filter, use_BN, activation_func, \
+                                                             input_channel, kernel_sizes, same_padding, \
+                                                             num_words, num_char_encoding_size, FCN)
+
+        self.gru_crf_layer = gru_crf(size_of_embedding + output_size + pos_size, \
+                                     gru_hidden_size, num_words, dropout_gru, bidirectional, tags, \
+                                     DO_FCN_GRUCRF)
+    def forward(self, x):
+        tmp_compute = self.overall_char_embedding(x[0])
+        #print(tmp_compute.size())
+        #print(x[1].size())
+        tmp_compute = torch.cat([tmp_compute, x[1].float(), x[5]], 2)
+        #print(tmp_compute.size())
+        tmp_gru_crf = self.gru_crf_layer((tmp_compute, x[4]), x[2], x[3].long())
+        return tmp_gru_crf
+    def predict(self, x):
+        tmp_compute = self.overall_char_embedding(x[0])
+        tmp_compute = torch.cat([tmp_compute, x[1].float(), x[5]], 2)
+        tmp_gru_crf = self.gru_crf_layer.predict((tmp_compute, x[4]), x[3].long())
+        return tmp_gru_crf
+
 ##############################
 
 #new
@@ -233,28 +290,32 @@ def get_longest_seq_len(MASK: '(torch.tensor: shape=(batch_size, num_words)) \
     return col
 
 class overall_char_embedding(nn.Module):
-    def __init__(self, output_size: '(tuple of ints): (batch_size, embedding_size_per_word)',
+    def __init__(self, output_size: '(tuple of ints): (batch_size, embedding_size_per_word)',\
     max_len_char: '(int) see in CharEmbedding',\
-    nums_filter: '(list) list of number of filters according to each kernel_sizes (respectively)',
-    use_BN: 'see in My2DConv',
-    activation_func: 'see in My2DConv',
-    input_channel: 'see in My2DConv',
-    kernel_sizes: '(list[int]) list of size of kernels used, and they will be computed concurrently',
-    same_padding: 'see in My2DConv',
-    num_words: 'number of words used in 1 sample',
-    num_char_encoding_size: 'size of encoding for each char'):
+    nums_filter: '(list) list of number of filters according to each kernel_sizes (respectively)',\
+    use_BN: 'see in My2DConv',\
+    activation_func: 'see in My2DConv',\
+    input_channel: 'see in My2DConv',\
+    kernel_sizes: '(list[int]) list of size of kernels used, and they will be computed concurrently',\
+    same_padding: 'see in My2DConv',\
+    num_words: 'number of words used in 1 sample',\
+    num_char_encoding_size: 'size of encoding for each char',\
+    FCN: '(bool) use FCN after CNN or not'):
         super().__init__()
         self.batch_size, self.embedding_size_per_word = output_size
         tmp_cnn_models = []
         for ind_cnn, kernel_size in enumerate(kernel_sizes):
             tmp_cnn_models.append(\
-            My2DConv(nums_filter[ind_cnn], use_BN, activation_func, input_channel,\
-            (kernel_size, num_char_encoding_size), same_padding)
+            My2DConvChar(nums_filter[ind_cnn], use_BN, activation_func, input_channel,\
+            (kernel_size, 1), same_padding)
             )
         self.num_words = num_words
         self.CNNs = nn.ModuleList(tmp_cnn_models)
-        self.MyMaxPool = nn.MaxPool2d((1, num_char_encoding_size), stride= (1,1))
-        self.MyFCN = nn.Linear(sum(nums_filter)*max_len_char, output_size[1])
+        self.MyMaxPool = nn.MaxPool2d((max_len_char, 1), stride= (1,1))
+        self.FCN = FCN
+        if self.FCN:
+            self.MyFCN = nn.Linear(sum(nums_filter)*num_char_encoding_size, output_size[1])
+            self.BN = nn.BatchNorm1d(output_size[1])
     def forward(self, x):
         batch_size, num_word, num_char, embedding_size = x.size()
         #print(x.size())
@@ -266,10 +327,16 @@ class overall_char_embedding(nn.Module):
             for tmp_cnn in self.CNNs:
                 tmp_output_cnn.append(self.MyMaxPool(tmp_cnn(tmp_compute[:,\
                 num_word,:,:,:])).view((batch_size, -1)))
-            all_output_list.append(F.relu(self.MyFCN(torch.cat(tmp_output_cnn, 1))))
+            tmp = torch.cat(tmp_output_cnn, 1)
+            #print(tmp.size())
+            if self.FCN:
+                all_output_list.append(F.relu(self.BN(self.MyFCN(tmp))))
+            else:
+                all_output_list.append(tmp)
         #print(all_output_list[0].size())
         #print(len(all_output_list))
         all_output_list = torch.stack(all_output_list, dim=1)
+        #print(all_output_list.size())
         return all_output_list
                 
 class gru_crf(nn.Module):
@@ -278,13 +345,17 @@ class gru_crf(nn.Module):
     recursion', dropout_gru, bidirectional: '(bool) if True, use bidirectional GRU',\
     tags: "(dict[int: str])example: {0:'I', 1:'B', 2:'O', 3:'<PAD>'}", dropout_FCN: '(double)'):
         super().__init__()
-        self.gru = nn.GRU(input_size=num_input_features, hidden_size=hidden_size, num_layers=num_layers,\
-        batch_first = True, dropout=dropout_gru, bidirectional=bidirectional)
-        #all_transition=allowed_transitions('IOB1', tags)
+        self.gru = nn.GRU(input_size=num_input_features, hidden_size=hidden_size, \
+                                 num_layers=num_layers,batch_first = True, dropout=dropout_gru, \
+                                 bidirectional=bidirectional)
+        
+        all_transition=allowed_transitions('BIO', tags)
         #self.crf = CRF(num_tags=len(tags), batch_first= True)
         self.linear = nn.Linear(hidden_size*2, hidden_size)
+        self.BN = nn.BatchNorm1d(num_layers)
         self.linear2 = nn.Linear(hidden_size, len(tags))
-        self.crf = ConditionalRandomField(len(tags))
+        self.BN2 = nn.BatchNorm1d(num_layers)
+        self.crf = ConditionalRandomField(len(tags), all_transition)
         self.dropout = nn.Dropout(dropout_FCN)
         
     def forward(self, samples, target: '(torch.tensor) shape=(...............,)the target tags to be used',\
@@ -293,20 +364,21 @@ class gru_crf(nn.Module):
         samples = samples[0]
         batch_size, words, _ = samples.size()
         tmp_t = time()
+        #print(samples.size())
         tmp_compute = self.gru(samples)[0].view(batch_size, words, -1)
 #         print(f'total GRU time: {time() - tmp_t}')
         index_to_cut = max(length).item()#get_longest_seq_len(mask)
         #length = torch.mean(length.float()).item()
         ##############################################
         ###cut padding some parts out#################
+        #print(tmp_compute.size())
+        tmp_compute = self.dropout(tmp_compute)
+        tmp_compute = F.relu(self.BN(self.linear(tmp_compute)))
+        tmp_compute = self.dropout(tmp_compute)
+        tmp_compute = F.relu(self.BN2(self.linear2(tmp_compute)))
         tmp_compute = tmp_compute[:, :index_to_cut,:]
         target = target[:, :index_to_cut]
         mask = mask[:, :index_to_cut]
-        #print(tmp_compute.size())
-        tmp_compute = self.dropout(tmp_compute)
-        tmp_compute = F.relu(self.linear(tmp_compute))
-        tmp_compute = self.dropout(tmp_compute)
-        tmp_compute = F.relu(self.linear2(tmp_compute))
         #print(tmp_compute.size())
         nll_loss = self.crf(tmp_compute,target.long(),mask)
 #         print(f'total CRF time: {time() - tmp_t}')
@@ -321,12 +393,12 @@ class gru_crf(nn.Module):
         index_to_cut = max(length).item()#get_longest_seq_len(mask)
         ##############################################
         ###cut padding some parts out#################
-        tmp_compute = tmp_compute[:, :index_to_cut,:]
-        mask = mask[:, :index_to_cut]
         #print(tmp_compute.size())
         
-        tmp_compute = F.relu(self.linear(tmp_compute))
-        tmp_compute = F.relu(self.linear2(tmp_compute))
+        tmp_compute = F.relu(self.BN(self.linear(tmp_compute)))
+        tmp_compute = F.relu(self.BN2(self.linear2(tmp_compute)))
+        tmp_compute = tmp_compute[:, :index_to_cut,:]
+        mask = mask[:, :index_to_cut]
         #print(tmp_compute.size())
         tmp_t = time()
         tmp_tags = self.crf.viterbi_tags(tmp_compute,mask)
@@ -358,7 +430,32 @@ class My2DConv(nn.Module):
             tmp_compute = nn.ReLU()(tmp_compute)
         return tmp_compute
         
+class My2DConvChar(nn.Module):
+    def __init__(self, num_filter: '(int) number of filters', use_BN: '(bool) if True, \
+                 use 2d-batchnorm after linear conv', activation_func: '(bool) if True, use RELU\
+                 after BN', input_channel: '(int) number of input channels', \
+                 kernel_size: '(tuple): (width, height) size of the kernels', \
+                 same_padding: '(bool) if True, input_w,input_h=output_w,output_h'):
+        super().__init__()
+        if same_padding:
+            #assume that dialation = 1 and stride = 1
+            self.padding = (math.floor((kernel_size[0] - 1)/2), 0)
+        else:
+            self.padding = 0
+        self.Conv = nn.Conv2d(input_channel, num_filter, kernel_size, padding= self.padding)
+        self.use_BN = use_BN
+        self.activation_func = activation_func
+        if self.use_BN:
+            self.BN = nn.BatchNorm2d(num_filter)
 
+    def forward(self, input_data: '(torch.tensor) dimension= (batch_size, num_channel_in, in_height, in_width)') \
+    -> '(torch.tensor) shape= (batch_size, num_filter, in_height, in_width)':
+        tmp_compute = self.Conv(input_data.float())
+        if self.use_BN:
+            tmp_compute = self.BN(tmp_compute)
+        if self.activation_func:
+            tmp_compute = F.relu(tmp_compute)
+        return tmp_compute
 
 
 class ScaledDotProductAttention(nn.Module):
@@ -496,3 +593,4 @@ def eval_score(tags: '(dict[int: str])', pred: '(list[(list, float)])', label: '
         else:
             performance_mat[i][2] = (2*performance_mat[i][0]*performance_mat[i][1])/(performance_mat[i][1]+performance_mat[i][0])
     return performance_mat
+

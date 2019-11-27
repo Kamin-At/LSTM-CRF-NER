@@ -1,0 +1,52 @@
+kernel_sizes: 3, gru_fcn_dropout: 0.006813016904534996
+gru_dropout: 0.6776328452054868, gru_out_dropout: 0.5032668841176309
+LR: 7.734705779916307e-05, grucrf_hidden_size: 128
+w_decay: -3
+kernel_sizes: 5, gru_fcn_dropout: 0.24388709715916573
+gru_dropout: 0.5189164701486996, gru_out_dropout: 0.20010767819272923
+LR: 9.341967646752712e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: 3, gru_fcn_dropout: 0.5453195488713356
+gru_dropout: 0.10784433116817849, gru_out_dropout: 0.548754641439819
+LR: 9.153363334608717e-05, grucrf_hidden_size: 64
+w_decay: -4
+kernel_sizes: 3, gru_fcn_dropout: 0.5043813452781387
+gru_dropout: 0.47933013779558087, gru_out_dropout: 0.20692735063921883
+LR: 5.858436381125482e-05, grucrf_hidden_size: 128
+w_decay: -5
+kernel_sizes: 5, gru_fcn_dropout: 0.17152197284215978
+gru_dropout: 0.24447672232519332, gru_out_dropout: 0.2756216463935265
+LR: 9.519874261919656e-05, grucrf_hidden_size: 128
+w_decay: -5
+kernel_sizes: 3, gru_fcn_dropout: 0.4770551780956222
+gru_dropout: 0.5156870347366691, gru_out_dropout: 0.6296722122331844
+LR: 7.245447810944573e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: 5, gru_fcn_dropout: 0.17773429694574838
+gru_dropout: 0.473512631149635, gru_out_dropout: 0.5693054848355826
+LR: 5.1364173280018045e-05, grucrf_hidden_size: 128
+w_decay: -4
+kernel_sizes: 3, gru_fcn_dropout: 0.10894766277280576
+gru_dropout: 0.13537279777811662, gru_out_dropout: 0.44200097805133404
+LR: 7.920795281762337e-05, grucrf_hidden_size: 128
+w_decay: -5
+kernel_sizes: 5, gru_fcn_dropout: 0.15275350118107794
+gru_dropout: 0.5928523264464528, gru_out_dropout: 0.4526665401581626
+LR: 5.707300616255278e-05, grucrf_hidden_size: 128
+w_decay: -4
+kernel_sizes: 3, gru_fcn_dropout: 0.5249378115587665
+gru_dropout: 0.14127544040149154, gru_out_dropout: 0.690815567894416
+LR: 6.22809313058531e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: 5, gru_fcn_dropout: 0.45975538859291915
+gru_dropout: 0.5784550412536564, gru_out_dropout: 0.3225207420620085
+LR: 9.626271195608126e-05, grucrf_hidden_size: 64
+w_decay: -5
+kernel_sizes: 3, gru_fcn_dropout: 0.030357804683886134
+gru_dropout: 0.5119779773622547, gru_out_dropout: 0.6894277697607499
+LR: 5.301517257262308e-05, grucrf_hidden_size: 128
+w_decay: -4
+kernel_sizes: 5, gru_fcn_dropout: 0.4247194352565181
+gru_dropout: 0.24051480942020384, gru_out_dropout: 0.16491193768469353
+LR: 6.831262195711746e-05, grucrf_hidden_size: 64
+w_decay: -4

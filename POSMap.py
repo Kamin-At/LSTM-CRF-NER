@@ -14,5 +14,6 @@ POSMAP = {
     'SCONJ' : 12,
     'PART' : 13,
     'PUNCT' : 14,
-    'None' : 15
+    'None' : 15,
+    'NONE' : 15,
 }

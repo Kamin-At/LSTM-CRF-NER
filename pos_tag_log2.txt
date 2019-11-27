@@ -1,0 +1,59 @@
+cur_ind: 0
+grucrf_dropout: 0.15362511334614795, gruchar_dropout: 0.5980022514604557
+DO_FCN_GRUCRF: 0.5768630847830541, DO_FCN_CHAR: 0.16913192620175962
+grucrf_hidden_size: 16, hidden_size_char_gru: 8
+LR: 0.00010637331301399346
+cur_ind: 0
+grucrf_dropout: 0.5301373474179435, gruchar_dropout: 0.3535320938186155
+DO_FCN_GRUCRF: 0.33245625194254125, DO_FCN_CHAR: 0.188645895431121
+grucrf_hidden_size: 8, hidden_size_char_gru: 8
+LR: 0.0010785001205463835
+cur_ind: 0
+grucrf_dropout: 0.13951195187322948, gruchar_dropout: 0.24710730836846764
+DO_FCN_GRUCRF: 0.25620325254940257, DO_FCN_CHAR: 0.4268088468037402
+grucrf_hidden_size: 8, hidden_size_char_gru: 16
+LR: 0.00020093834125706967
+cur_ind: 0
+grucrf_dropout: 0.48361157826970524, gruchar_dropout: 0.5682662008654656
+DO_FCN_GRUCRF: 0.5149266266376124, DO_FCN_CHAR: 0.5968618548164583
+grucrf_hidden_size: 8, hidden_size_char_gru: 8
+LR: 0.0010170059348916071
+cur_ind: 0
+grucrf_dropout: 0.12072547653327073, gruchar_dropout: 0.47555636038487215
+DO_FCN_GRUCRF: 0.5209611981876697, DO_FCN_CHAR: 0.2039497263110109
+grucrf_hidden_size: 16, hidden_size_char_gru: 16
+LR: 0.0022534856603083327
+cur_ind: 0
+grucrf_dropout: 0.1916954185768183, gruchar_dropout: 0.19980252515594873
+DO_FCN_GRUCRF: 0.5338994586979355, DO_FCN_CHAR: 0.11058479580106398
+grucrf_hidden_size: 16, hidden_size_char_gru: 8
+LR: 0.0016164783186946542
+cur_ind: 0
+grucrf_dropout: 0.22081264406355858, gruchar_dropout: 0.29315883081948446
+DO_FCN_GRUCRF: 0.49099261631110436, DO_FCN_CHAR: 0.1787318415505191
+grucrf_hidden_size: 8, hidden_size_char_gru: 16
+LR: 0.00010406256332902056
+best_score: 0.32022660375416623
+best_mat
+I => recall: 0.008771929824561403, precision: 0.0008223684210526315, , f1: 0.0015037593984962405
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 0.9971783897851916, precision: 0.9239765619420596, , f1: 0.9591760518640025
+best_mat
+----------------------------------
+cur_ind: 1
+grucrf_dropout: 0.2754459975948521, gruchar_dropout: 0.14854092043304004
+DO_FCN_GRUCRF: 0.3431869517694651, DO_FCN_CHAR: 0.43671005073897995
+grucrf_hidden_size: 16, hidden_size_char_gru: 16
+LR: 0.002189429203343411
+best_score: 0.32014071012878004
+best_mat
+I => recall: 0.0, precision: 0.0, , f1: 0.0
+B => recall: 0.0, precision: 0.0, , f1: 0.0
+O => recall: 1.0, precision: 0.9238644100990703, , f1: 0.9604221303863401
+best_mat
+----------------------------------
+cur_ind: 2
+grucrf_dropout: 0.2706290680238935, gruchar_dropout: 0.41698317390964
+DO_FCN_GRUCRF: 0.1309842788207952, DO_FCN_CHAR: 0.34742971413582713
+grucrf_hidden_size: 8, hidden_size_char_gru: 16
+LR: 0.0017834142043595955

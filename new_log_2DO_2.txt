@@ -1,0 +1,4 @@
+lstmcrf_dropout = DO_FCN_LSTMCRF: 0.4, size_char: 6
+lstmcrf_hidden_size: 128, LR: 0.001
+epoch: 0, score: 0.3130405789149114
+epoch: 1, score: 0.31297262095015094
